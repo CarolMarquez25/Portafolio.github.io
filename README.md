@@ -1,31 +1,26 @@
-# Design studio one page template - ARCHIVED
+    Plantilla de una página para estudio de diseño - ARCHIVADO
+Plantilla de sitio web plana y responsiva, diseñada por cssauthor y codificada por Maxim Orlov .
 
-Flat and responsive website template, designed by [cssauthor](http://www.cssauthor.com/) and coded by [Maxim Orlov](https://github.com/orlovmax).
+Demostración: http://website-templates.github.io/design-studio_one-page-template
 
-Demo: [http://website-templates.github.io/design-studio_one-page-template](http://website-templates.github.io/design-studio_one-page-template/)
+Demostración de maqueta Maqueta de producto creada con http://frame.lab25.co.uk/
 
-![Mockup demo](screenshots/pic.jpg)
-Product mockup created with [http://frame.lab25.co.uk/](http://frame.lab25.co.uk/)
-
-## Contents
-
-- [Folder and file structure](#folder-and-file-structure)
-- [Requirements:](#requirements)
-    - [Editorconfig](#editorconfig)
-- [How to start](#how-to-start)
-- [Site configuration](#site-configuration)
-- [Tasks](#tasks)
-    - [Cleanup](#cleanup)
-    - [Dev](#dev)
-    - [Build](#build)
-    - [Rebuild](#rebuild)
-    - [Server](#server)
-    - [Sprite](#sprite)
-- [Live reload](#live-reload)
-- [License](#license)
-
-## Folder and file structure
-```
+Contenido
+Estructura de carpetas y archivos
+Requisitos:
+Configuración del editor
+Cómo empezar
+Configuración del sitio
+Tareas
+Limpieza
+Desarrollador
+Construir
+Reconstruir
+Servidor
+Duende
+Recarga en vivo
+Licencia
+Estructura de carpetas y archivos
 ./
 ├── .editorconfig
 ├── gulpfile.js
@@ -88,104 +83,75 @@ Product mockup created with [http://frame.lab25.co.uk/](http://frame.lab25.co.uk
         |
         └── fonts/                             * @font-face-ready webfonts
 
-```
+Requisitos
+Node.js
+Sistema de construcción: Grunt o Gulp
+Opcionalmente:
+Configuración del editor
+Configuración del editor
+Este proyecto tiene un archivo .editorconfig en la raíz. Describe el estilo de sangría, los espacios finales, etc. Ver más detalles aquí.
 
-## Requirements
+Cómo empezar
+Si no has usado Gulp antes, asegúrate de consultar la guía de introducción y también estas recetas .
 
-- [Node.js](http://nodejs.org/)
-- Build sytem: [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/)
-- Optionally:
-  * [Editorconfig](http://editorconfig.org/)
+Antes de comenzar es necesario tener instalado npm , así como gulp globalmente.
 
-#### Editorconfig
+Algunos pasos sencillos para empezar:
 
-This project has an .editorconfig file at the root. It describes indent style, trailing whitespaces etc. See more details [here](http://editorconfig.org/)
+Instale las dependencias package.jsonejecutando: npm install.
+¡Ejecute tareas de la lista a continuación y comience el desarrollo!
+Editar la configuración general en la sección dev/data/config.jsonVer configuración del sitio
+Configuración del sitio
+Este código repetitivo utiliza plantillas Pug con configuraciones de datos externas. La configuración principal se encuentra en dev/data/config.jsonel archivo. Y está disponible para su uso en plantillas conconfig.key-name
 
-## How to start
+Tareas
+Aquí vienen grupos de tareas de gulp con algunas explicaciones.
 
-If you haven't used [Gulp](http://gulpjs.com/) before, be sure to check out the [Getting Started]([https://github.com/gulpjs/gulp/blob/master/docs/README.md](https://gulpjs.com/docs/en/getting-started/quick-start)) guide, also check these [recips](https://github.com/gulpjs/gulp/tree/master/docs/recipes#recipes)
+Limpieza
+Eliminar marcadores de posición de los directorios de trabajo. Gulp:gulp cleanup
 
-Before start you need to have installed _npm_ , as well as _gulp_ globally.
+Eliminar archivos de gitkeep
+Desarrollador
+Tarea de desarrollo con servidor estático. Gulp:gulp dev
 
-**A few simple steps to start:**
-* Install dependencies from `package.json` by running: `npm install`.
-* Run tasks from the list below and start devevelopment!
-* Edit general settings in `dev/data/config.json` See [Site configuration](#site-configuration) section
+Paquete de javascripts
+Compilar hojas de estilo Sass
+Agregar prefijos de proveedores en CSS
+Combinar consultas de medios en archivos CSS
+Compilar plantillas de Pug
+Ayudantes de sincronización y otros recursos
+Sincronizar imágenes
+Ejecute el servidor estático BrowserSync con recarga en vivo usando
+Esté atento a los cambios y ejecute la tarea de desarrollo
+Construir
+Tarea de construcción. ¡Gulp!gulp build
 
-## Site configuration
+Minimizar imágenes
+Minificar archivos javascript
+Minimizar hojas de estilo
+Minificar HTML
+Ejecutar el servidor estático de BrowserSync
+Reconstruir
+Regenerar y compilar el proyecto ejecutando todas las tareas. Gulp:gulp rebuild
 
-This boilerplate uses Pug templates with external data configs.
-Main settings can be found in `dev/data/config.json` file. And they're available for usage in templates with `config.key-name`
+Paquete de javascripts
+Compilar hojas de estilo Sass
+Agregar prefijos de proveedores en CSS
+Combinar consultas de medios en archivos CSS
+Compilar plantillas de Pug
+Ayudantes de sincronización y otros recursos
+Sincronizar imágenes
+Minimizar imágenes
+Minificar archivos javascript
+Minimizar hojas de estilo
+Minificar HTML
+Servidor
+Ejecuta el servidor sin estar pendiente de los cambios. Gulp:gulp server
 
-## Tasks
+Ejecutar el servidor estático de BrowserSync
+Recarga en vivo
+Este proyecto utiliza BrowserSync como servidor estático con la opción de recarga en vivo habilitada y configurada.
 
-Here comes groups ofgulp tasks with some explanations
+Licencia
+Instituto Tecnológico de Massachusetts (MIT)
 
-#### Cleanup
-
-Remove placeholders from work directories.
-Gulp: `gulp cleanup`
-
-* Remove gitkeep files
-
-#### Dev
-
-Dev task with static server.
-Gulp: `gulp dev`
-
-* Bundle javascripts
-* Compile Sass stylesheets
-* Add vendor prefixes in css
-* Combine media queries in css files
-* Compile Pug templates
-* Sync helpers and other assets
-* Sync images
-* Run BrowserSync static server with live reload using
-* Watch for changes and run dev task
-
-
-#### Build
-
-Build task.
-Gulp: `gulp build`
-
-* Minify images
-* Minify javascript files
-* Minify stylesheets
-* Minify html
-* Run BrowserSync static server
-
-
-#### Rebuild
-
-Regenerate and build project by running all tasks.
-Gulp: `gulp rebuild`
-
-* Bundle javascripts
-* Compile Sass stylesheets
-* Add vendor prefixes in css
-* Combine media queries in css files
-* Compile Pug templates
-* Sync helpers and other assets
-* Sync images
-* Minify images
-* Minify javascript files
-* Minify stylesheets
-* Minify html
-
-
-#### Server
-
-Run server without watching for changes.
-Gulp: `gulp server`
-
-* Run BrowserSync static server
-
-
-## Live reload
-
-This project uses BrowserSync as static server with enabled and configured live reload option.
-
-## License
-
-[MIT](https://github.com/website-templates/design-studio_one-page-template/blob/master/LICENSE.md)
