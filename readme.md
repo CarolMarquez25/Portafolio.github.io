@@ -1,6 +1,6 @@
-# LC Consultoría Estadística
+# 
 
-Sitio web profesional de Carol Márquez, consultora especializada en análisis de datos, estadística aplicada y optimización de campañas.
+Sitio web profesional, consultora especializada en análisis de datos, estadística aplicada y optimización de campañas.
 
 ## Servicios
 - Consultoría estadística
@@ -10,6 +10,6 @@ Sitio web profesional de Carol Márquez, consultora especializada en análisis d
 - Automatización de reportes
 
 ## Contacto
-📧 carol.consultoria@gmail.com  
+📧 consultoria@gmail.com  
 📱 WhatsApp: [Enlace directo](https://wa.me/5211234567890)  
 🔗 [LinkedIn](https://www.linkedin.com/in/tuusuario)
