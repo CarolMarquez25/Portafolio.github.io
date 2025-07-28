@@ -1,68 +1,101 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
+/* Reset básico */
+* {
   margin: 0;
-  background: #616060;
-  color: #f2eded;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Colores principales */
+:root {
+  --bg-color: #ffffff;
+  --primary: #1f3a93;
+  --secondary: #2e86de;
+  --text-dark: #000000;
+  --text-light: #333333;
+  --gray-light: #f5f5f5;
+  --gray: #cccccc;
+  --accent-yellow: #f1c40f;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-light);
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Encabezado */
 header {
-  background: #30363b;
-  color: black;
+  background-color: var(--primary);
+  color: #fff;
+  padding: 20px;
   text-align: center;
-  padding: 30px 20px;
 }
 
-.logo {
-  width: 100px;
-  height: auto;
-}
-
-.subtitulo {
-  font-size: 1.2rem;
-  margin-top: 5px;
-}
-
-.contenedor {
-  max-width: 900px;
-  margin: auto;
-  padding: 40px 20px;
-  background: black;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-section {
-  margin-bottom: 40px;
-}
-
-h2 {
-  color: #0f4c75;
+header h1 {
   margin-bottom: 10px;
 }
 
-ul {
-  padding-left: 20px;
-}
-
-.boton {
-  display: inline-block;
-  background: #0f4c75;
-  color: black;
+nav a {
+  color: #fff;
   text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--accent-yellow);
+}
+
+/* Secciones */
+section {
+  padding: 40px 20px;
+  background-color: var(--gray-light);
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+h2 {
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
   padding: 10px 20px;
-  margin-right: 10px;
-  border-radius: 5px;
-  transition: background 0.3s;
+  background-color: var(--secondary);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
-.boton:hover {
-  background: #3282b8;
+.btn:hover {
+  background-color: var(--accent-yellow);
+  color: var(--text-dark);
 }
 
+/* Footer */
 footer {
+  background-color: var(--primary);
+  color: #fff;
   text-align: center;
   padding: 20px;
-  background: #eeeeee;
-  font-size: 0.9rem;
-  color: #666;
+  font-size: 0.9em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
