@@ -1,0 +1,92 @@
+
+body {
+  background-color: #121212;
+  color: white;
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  background-color: #1c1c1c;
+  padding: 60px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 3px solid #FFD700;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-logo {
+  width: 140px;
+  height: auto;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+.hero-text p {
+  font-size: 1.3rem;
+  color: #FFD700;
+  margin-top: 10px;
+}
+
+.servicio-boton {
+  background-color: #FFD700;
+  color: black;
+  padding: 15px 25px;
+  margin: 10px 0;
+  border-radius: 30px;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.servicio-boton:hover {
+  background-color: #e6c200;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.seccion-oscura {
+  background-color: #1c1c1c;
+  padding: 60px 20px;
+  color: white;
+  position: relative;
+}
+
+.lista-academica {
+  list-style: none;
+  padding-left: 0;
+}
+
+.lista-academica li {
+  margin: 10px 0;
+  padding-left: 1.5em;
+  position: relative;
+  color: #FFD700;
+}
+
+.lista-academica li::before {
+  content: "■";
+  color: #FFD700;
+  position: absolute;
+  left: 0;
+}
